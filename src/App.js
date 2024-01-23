@@ -9,10 +9,10 @@ function App() {
     setUserList(prevData => [...prevData,{name:uNmae,age:uAge,id:Math.random().toString()}])
   }
   return (
-    <div>
+    <React.Fragment>
     <NewUser onAddUsers={userHandler}/>
     <UserList users={userList}/>
-    </div>
+    </React.Fragment>
   );
 }
 

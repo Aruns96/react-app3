@@ -1,8 +1,9 @@
-import React , { useState } from "react";
+import  React, { useState } from "react";
 import Card from "../ui/Card";
 import "./NewUser.css"
 import Button from "../ui/Button";
 import ErrorModal from "../ui/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 
 const NewUser = (props) => {
     const [inputName,setInputName] = useState("")
@@ -35,7 +36,7 @@ const NewUser = (props) => {
   }
 
   return (
-    <div>
+    <Wrapper>
     {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}/>}
     <Card className="input">
     <form  onSubmit={submitHandler}>
@@ -47,7 +48,7 @@ const NewUser = (props) => {
     </form>
    
     </Card>
-    </div>
+    </Wrapper>
   );
 };
 
