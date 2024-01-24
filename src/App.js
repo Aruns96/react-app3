@@ -5,8 +5,8 @@ import UserList from './components/user/UserList';
 
 function App() {
   const [userList , setUserList] = useState([])
-  const userHandler = (uNmae,uAge)=>{
-    setUserList(prevData => [...prevData,{name:uNmae,age:uAge,id:Math.random().toString()}])
+  const userHandler = (uNmae,uAge,ucollege)=>{
+    setUserList(prevData => [...prevData,{name:uNmae,age:uAge,college:ucollege,id:Math.random().toString()}])
   }
   return (
     <React.Fragment>
